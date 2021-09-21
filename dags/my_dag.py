@@ -14,7 +14,7 @@ with DAG(
                 max_active_runs=1,
                 tags=["mcola_my_dag"],
                 catchup=True
-) as dag:
+ ) as dag:
 
     checking_data = PythonOperator(
         task_id="task_1",
