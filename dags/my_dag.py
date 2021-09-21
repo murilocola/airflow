@@ -37,4 +37,12 @@ with DAG(
         bash_command='exit 0'
     )
 
-    [checking_data,checking_bash]>>checking_teste
+    checking_bash_2 = BashOperator(
+        task_id="bash_task_2",
+        bash_command='exit 0'
+    )
+
+    #checking_data>>checking_teste>>checking_bash>>checking_bash_2
+    [checking_data,checking_teste,checking_bash,checking_bash_2]
+
+    #checking_bash_2<<checking_bash<<checking_teste<<checking_data
