@@ -6,6 +6,9 @@ from datetime import datetime, timedelta
 def _checking_data():
     print('teste task01')
 
+
+
+
 with DAG(
                 dag_id="my_dag",
                 description="DAG é minha",
